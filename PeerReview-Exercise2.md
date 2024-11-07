@@ -134,7 +134,7 @@ Please refer to the first code review template on how to do a permalink.
 
 ___
 #### Put style guide infractures ####
-
+[Local variables should not be prepended with '_'](https://github.com/ensemble-ai/exercise-2-camera-control-CharlieEdwards5/blob/1b9b50621677a2959293dceb167f8b69f5c9e5ed/Obscura/scenes/auto_scroll.gd#L22) - Only private variable names should be prepended with an underscore.
 ___
 
 # Best Practices #
@@ -149,5 +149,10 @@ If the student has breached the best practices and has done something that shoul
 This should be similar to the Code Style justification.
 
 #### Best Practices Infractions ####
+* [Script files inside scenes folder](https://github.com/ensemble-ai/exercise-2-camera-control-CharlieEdwards5/tree/master/Obscura/scenes) - Most of the camera scripts are inside the scenes folder instead of the scripts folder.
+
+* [Integer Division](https://github.com/ensemble-ai/exercise-2-camera-control-CharlieEdwards5/blob/1b9b50621677a2959293dceb167f8b69f5c9e5ed/Obscura/scenes/position_lock_lerping.gd#L6) - Godot handles the vessel base speed as an integer, so the decimal is discarded when dividing by 5. This could cause some small inconsistences depending on the vessel's base speed.
+
+* [Unused variable](https://github.com/ensemble-ai/exercise-2-camera-control-CharlieEdwards5/blob/1b9b50621677a2959293dceb167f8b69f5c9e5ed/Obscura/scenes/lerp_smoothing_with_lead.gd#L11) - The private _speed variable is unused in this class.
 
 #### Best Practices Exemplars ####
